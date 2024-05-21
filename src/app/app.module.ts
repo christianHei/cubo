@@ -7,14 +7,14 @@ import {RouterTestingModule} from "@angular/router/testing";
 import {RouterModule} from "@angular/router";
 import {rootRouterConfig} from "./app.routing";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { OpcionesComponent } from './opciones/opciones.component';
+import { LadoUnoComponent } from './lado-uno/lado-uno.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
     PageNotFoundComponent,
-    OpcionesComponent
+    LadoUnoComponent
   ],
   imports: [
     RouterModule.forRoot(rootRouterConfig, { useHash: false, relativeLinkResolution: 'legacy' }),

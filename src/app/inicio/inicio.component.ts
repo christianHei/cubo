@@ -53,7 +53,9 @@ export class InicioComponent {
         // Si no es un clic sostenido, el mouse no se ha movido y se ha hecho clic,
         // realiza la redirección solo si se ha hecho clic en una cara del cubo
         const faceId = cubeFace.id; // Obtener el ID de la cara del cubo seleccionada
-        this.router.navigateByUrl('/opciones/' + faceId); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
+        if (faceId === 'lado1') {
+          this.router.navigateByUrl('/lado-uno'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
+        }
       }
     }
     this.isLongPress = false; // Restablece la bandera de clic sostenido

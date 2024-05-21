@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { InicioComponent } from './inicio/inicio.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import {OpcionesComponent} from "./opciones/opciones.component";
+import {LadoUnoComponent} from "./lado-uno/lado-uno.component";
 
 export const rootRouterConfig: Routes = [
   {
@@ -14,8 +14,8 @@ export const rootRouterConfig: Routes = [
     component: InicioComponent
   },
   {
-    path: 'opciones/:id',
-    component: OpcionesComponent
+    path: 'lado-uno',
+    component: LadoUnoComponent
   },
   {
     path: '**',
