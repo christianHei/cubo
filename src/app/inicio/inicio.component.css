@@ -1,0 +1,39 @@
+/* Evitar la selección de texto en el documento */
+body {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+}
+
+
+/* Estilos básicos para centrar la escena */
+.scene {
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+  margin: 100px auto;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out;
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  backface-visibility: hidden;
+}
+
+.front  { transform: rotateY(  0deg) translateZ(100px); background-image: url('../../assets/images/1.jpeg'); }
+.back   { transform: rotateY(180deg) translateZ(100px); background-image: url('../../assets/images/2.jpeg'); }
+.left   { transform: rotateY(-90deg) translateZ(100px); background-image: url('../../assets/images/3.jpeg'); }
+.right  { transform: rotateY( 90deg) translateZ(100px); background-image: url('../../assets/images/4.jpeg'); }
+.top    { transform: rotateX( 90deg) translateZ(100px); background-image: url('../../assets/images/5.jpeg'); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); background-image: url('../../assets/images/6.jpeg'); }
