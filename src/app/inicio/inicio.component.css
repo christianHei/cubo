@@ -44,6 +44,7 @@ body {
   height: 300px; /*tamaño del cubo*/
   background-size: cover;
   backface-visibility: hidden;
+  cursor: pointer;
 }
 
 /*modifivar el translate segun el tamaño del cubo*/
