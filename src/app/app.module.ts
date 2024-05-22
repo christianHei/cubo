@@ -8,6 +8,7 @@ import {RouterModule} from "@angular/router";
 import {rootRouterConfig} from "./app.routing";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LadoUnoComponent } from './lado-uno/lado-uno.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LadoUnoComponent } from './lado-uno/lado-uno.component';
   imports: [
     RouterModule.forRoot(rootRouterConfig, { useHash: false, relativeLinkResolution: 'legacy' }),
     BrowserModule,
-    RouterTestingModule
+    RouterTestingModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
