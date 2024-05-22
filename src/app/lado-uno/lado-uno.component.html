@@ -1,27 +1,28 @@
-<div class="button-container">
-  <button class="round-button" (click)="goBack()">Atrás</button>
-</div>
-
 <div class="container-wrapper">
+  <div class="button-container" *ngIf="backButton">
+    <button class="round-button" (click)="goBack()">Atrás</button>
+  </div>
   <div class="container">
     <div class="left-images">
-      <img src="assets/images/lado-uno/CAPITULO-1-02.png" alt="Imagen 1" (click)="expandImage($event)">
-      <img src="assets/images/lado-uno/CAPITULO-1-03.png" alt="Imagen 2" (click)="expandImage($event)">
-      <img src="assets/images/lado-uno/CAPITULO-1-04.png" alt="Imagen 3" (click)="expandImage($event)">
+      <img src="assets/images/lado-uno/CAPITULO-1-02.png" alt="Imagen 2" (click)="expandImage($event)">
+      <img src="assets/images/lado-uno/CAPITULO-1-03.png" alt="Imagen 3" (click)="expandImage($event)">
+      <img src="assets/images/lado-uno/CAPITULO-1-04.png" alt="Imagen 4" (click)="expandImage($event)">
     </div>
     <div class="video">
       <!-- Aquí puedes colocar tu reproductor de vídeo -->
       <!-- Puedes ajustar el tamaño del reproductor según tus necesidades -->
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/TU_ID_DE_VIDEO" frameborder="0" allowfullscreen></iframe>
+      <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/TU_ID_DE_VIDEO" frameborder="0" allowfullscreen></iframe>-->
+      <img src="assets/images/animacion/animacion.jpeg" alt="animacion" style="width: 400px; padding-left: 20px; padding-right: 20px ">
     </div>
     <div class="right-images">
-      <img src="assets/images/lado-uno/CAPITULO-1-05.png" alt="Imagen 4" (click)="expandImage($event)">
-      <img src="assets/images/lado-uno/CAPITULO-1-06.png" alt="Imagen 5" (click)="expandImage($event)">
-      <img src="assets/images/lado-uno/CAPITULO-1-07.png" alt="Imagen 6" (click)="expandImage($event)">
+      <img src="assets/images/lado-uno/CAPITULO-1-05.png" alt="Imagen 5" (click)="expandImage($event)">
+      <img src="assets/images/lado-uno/CAPITULO-1-06.png" alt="Imagen 6" (click)="expandImage($event)">
+      <img src="assets/images/lado-uno/CAPITULO-1-07.png" alt="Imagen 4" (click)="expandImage($event)">
     </div>
   </div>
   <!-- Contenedor adicional para la imagen expandida -->
   <div class="expanded-image-container" *ngIf="expandedImage">
+    <button class="close-button" (click)="closeImage()">✕</button>
     <img [src]="expandedImageSrc" alt="Imagen expandida" class="expanded-image">
   </div>
 </div>

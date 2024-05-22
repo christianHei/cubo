@@ -10,6 +10,7 @@ export class LadoUnoComponent implements OnInit {
 
   expandedImage: boolean = false;
   expandedImageSrc: string = '';
+  backButton = true;
 
   constructor(private router: Router) { }
 
@@ -25,5 +26,12 @@ export class LadoUnoComponent implements OnInit {
     const src = img.src;
     this.expandedImageSrc = src;
     this.expandedImage = true;
+    this.backButton = false;
+  }
+
+  closeImage() {
+    this.expandedImage = false; // Oculta la imagen expandida
+    this.expandedImageSrc = ''; // Limpia la ruta de la imagen expandida
+    this.backButton = true;
   }
 }

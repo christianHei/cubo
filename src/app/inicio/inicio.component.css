@@ -1,18 +1,33 @@
+
 /* Evitar la selección de texto en el documento */
 body {
+  margin: 0;
+  padding: 0;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE 10+ */
   user-select: none; /* Standard syntax */
 }
 
-
 /* Estilos básicos para centrar la escena */
 .scene {
-  width: 200px;
-  height: 200px;
-  perspective: 600px;
-  margin: 100px auto;
+  position: absolute; /* Posiciona la imagen expandida sobre el contenedor */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  z-index: 1000;
+  background-color: #21272A; /* Cambia este valor al color de fondo que desees */
+}
+
+/* Estilos adicionales para centrar el cubo */
+.cube-container {
+  width: 300px; /*tamaño del cubo*/
+  height: 300px; /*tamaño del cubo*/
+  perspective: 800px;
 }
 
 .cube {
@@ -25,15 +40,16 @@ body {
 
 .face {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 300px; /*tamaño del cubo*/
+  height: 300px; /*tamaño del cubo*/
   background-size: cover;
   backface-visibility: hidden;
 }
 
-.front  { transform: rotateY(  0deg) translateZ(100px); background-image: url('../../assets/images/3.jpeg'); }
-.right  { transform: rotateY( 90deg) translateZ(100px); background-image: url('../../assets/images/4.jpeg'); }
-.back   { transform: rotateY(180deg) translateZ(100px); background-image: url('../../assets/images/5.jpeg'); }
-.left   { transform: rotateY(-90deg) translateZ(100px); background-image: url('../../assets/images/6.jpeg'); }
-.top    { transform: rotateX( 90deg) translateZ(100px); background-image: url('../../assets/images/1.jpeg'); }
-.bottom { transform: rotateX(-90deg) translateZ(100px); background-image: url('../../assets/images/2.jpeg'); }
+/*modifivar el translate segun el tamaño del cubo*/
+.front  { transform: rotateY(  0deg) translateZ(150px); background-image: url('../../assets/images/3.jpeg'); }
+.right  { transform: rotateY( 90deg) translateZ(150px); background-image: url('../../assets/images/4.jpeg'); }
+.back   { transform: rotateY(180deg) translateZ(150px); background-image: url('../../assets/images/5.jpeg'); }
+.left   { transform: rotateY(-90deg) translateZ(150px); background-image: url('../../assets/images/6.jpeg'); }
+.top    { transform: rotateX( 90deg) translateZ(150px); background-image: url('../../assets/images/1.jpeg'); }
+.bottom { transform: rotateX(-90deg) translateZ(150px); background-image: url('../../assets/images/2.jpeg'); }

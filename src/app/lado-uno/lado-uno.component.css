@@ -1,9 +1,7 @@
 .container-wrapper {
-  display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  height: 90vh; /* Altura del viewport */
-  position: relative; /* Ajusta el posicionamiento del contenedor de la imagen expandida */
+  display: grid;
+  grid-template-columns: 1fr; /* Una sola columna */
+  justify-items: center; /* Centra horizontalmente */
 }
 
 .container {
@@ -31,9 +29,8 @@
 }
 
 .button-container {
-  display: flex;
-  justify-content: center; /* Centra el botón horizontalmente */
-  margin-top: 20px; /* Margen inferior opcional */
+  margin-top: 40px; /* Ajusta el margen superior según sea necesario */
+  margin-bottom: 40px; /* Ajusta el margen inferior según sea necesario */
 }
 
 .round-button {
@@ -75,4 +72,15 @@
 .expanded-image {
   max-width: 90%; /* Ajusta el tamaño máximo de la imagen */
   max-height: 90%; /* Ajusta el tamaño máximo de la imagen */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px; /* Ajusta la distancia desde la parte superior según sea necesario */
+  right: 10px; /* Ajusta la distancia desde la derecha según sea necesario */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white; /* Color del icono */
+  font-size: 24px; /* Tamaño del icono */
 }
