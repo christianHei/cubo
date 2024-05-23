@@ -1,8 +1,48 @@
 
+.left-images,
+.right-images {
+  display: flex;
+  flex-direction: column;
+}
+
 .left-images img,
 .right-images img {
   max-width: 25em; /* Ajusta el tamaño según tus necesidades */
   margin-bottom: 10px; /* Espacio entre las imágenes */
   cursor: pointer; /* Cursor de puntero para indicar que es clicable */
   transition: transform 0.3s ease; /* Transición suave para la expansión */
+}
+
+/* Media queries para hacer el diseño responsive */
+@media (max-width: 768px) {
+
+  .video {
+    margin: 20px 0;
+  }
+
+  .left-images, .right-images {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .left-images img, .right-images img {
+    max-width: 30%;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    padding: 8px 16px;
+  }
+
+  .left-images img, .right-images img {
+    max-width: 30%;
+  }
+
+  .video img {
+    width: 100%;
+    padding: 0;
+  }
 }

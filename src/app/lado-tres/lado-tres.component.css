@@ -16,6 +16,10 @@
 /* Media queries para hacer el diseño responsive */
 @media (max-width: 768px) {
 
+  .video {
+    margin: 20px 0;
+  }
+
   .left-images, .right-images {
     flex-direction: row;
     flex-wrap: wrap;
@@ -23,7 +27,7 @@
   }
 
   .left-images img, .right-images img {
-    max-width: 150px;
+    max-width: 30%;
     margin: 5px;
   }
 }
@@ -34,7 +38,7 @@
   }
 
   .left-images img, .right-images img {
-    max-width: 100px;
+    max-width: 30%;
   }
 
   .video img {
