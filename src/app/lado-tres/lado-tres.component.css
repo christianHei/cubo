@@ -1,0 +1,8 @@
+
+.left-images img,
+.right-images img {
+  max-width: 25em; /* Ajusta el tamaño según tus necesidades */
+  margin-bottom: 10px; /* Espacio entre las imágenes */
+  cursor: pointer; /* Cursor de puntero para indicar que es clicable */
+  transition: transform 0.3s ease; /* Transición suave para la expansión */
+}

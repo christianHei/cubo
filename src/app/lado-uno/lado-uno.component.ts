@@ -4,7 +4,7 @@ import { Router } from "@angular/router";
 @Component({
   selector: 'app-lado-uno',
   templateUrl: './lado-uno.component.html',
-  styleUrls: ['./lado-uno.component.css']
+  styleUrls: ['../lado.component.css']
 })
 export class LadoUnoComponent implements OnInit {
 

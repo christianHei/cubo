@@ -56,6 +56,21 @@ export class InicioComponent {
         if (faceId === 'lado1') {
           this.router.navigateByUrl('/lado-uno'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
         }
+        else if (faceId === 'lado2') {
+          this.router.navigateByUrl('/lado-dos'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
+        }
+        else if (faceId === 'lado3') {
+          this.router.navigateByUrl('/lado-tres'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
+        }
+        else if (faceId === 'lado4') {
+          this.router.navigateByUrl('/lado-cuatro'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
+        }
+        else if (faceId === 'lado5') {
+          this.router.navigateByUrl('/lado-cinco'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
+        }
+        else if (faceId === 'lado6') {
+          this.router.navigateByUrl('/lado-seis'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
+        }
       }
     }
     this.isLongPress = false; // Restablece la bandera de clic sostenido

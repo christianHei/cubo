@@ -1,0 +1,26 @@
+<div fxLayout="column" class="container">
+  <div class="button-container" *ngIf="backButton" fxLayout="row" fxLayoutAlign="center"  >
+    <button class="button" (click)="goBack()">Atrás</button>
+  </div>
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+    <div class="left-images" fxLayout="column" fxLayout.xs="row">
+      <img src="assets/images/lado-3/1.png" alt="Imagen 1" (click)="expandImage($event)">
+      <img src="assets/images/lado-3/2.png" alt="Imagen 2" (click)="expandImage($event)">
+    </div>
+    <div class="video" fxLayout="column" fxLayout.xs="row" fxLayoutAlign="center">
+      <!-- Aquí puedes colocar tu reproductor de vídeo -->
+      <!-- Puedes ajustar el tamaño del reproductor según tus necesidades -->
+      <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/TU_ID_DE_VIDEO" frameborder="0" allowfullscreen></iframe>-->
+      <img src="assets/images/animacion/animacion.jpeg" alt="animacion" style="width: 350px; padding-left: 20px; padding-right: 20px ">
+    </div>
+    <div class="right-images" fxLayout="column" fxLayout.xs="row">
+      <img src="assets/images/lado-3/3.png" alt="Imagen 3" (click)="expandImage($event)">
+      <img src="assets/images/lado-3/4.png" alt="Imagen 4" (click)="expandImage($event)">
+    </div>
+  </div>
+  <!-- Contenedor adicional para la imagen expandida -->
+  <div class="expanded-image-container" *ngIf="expandedImage" fxLayout="column" fxLayoutAlign="center center">
+    <button class="close-button" (click)="closeImage()">✕</button>
+    <img [src]="expandedImageSrc" alt="Imagen expandida" class="expanded-image">
+  </div>
+</div>

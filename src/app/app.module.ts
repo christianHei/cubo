@@ -10,6 +10,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LadoUnoComponent } from './lado-uno/lado-uno.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { LadoDosComponent } from './lado-dos/lado-dos.component';
+import { LadoTresComponent } from './lado-tres/lado-tres.component';
+import { LadoCuatroComponent } from './lado-cuatro/lado-cuatro.component';
+import { LadoCincoComponent } from './lado-cinco/lado-cinco.component';
+import { LadoSeisComponent } from './lado-seis/lado-seis.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { LadoDosComponent } from './lado-dos/lado-dos.component';
     InicioComponent,
     PageNotFoundComponent,
     LadoUnoComponent,
-    LadoDosComponent
+    LadoDosComponent,
+    LadoTresComponent,
+    LadoCuatroComponent,
+    LadoCincoComponent,
+    LadoSeisComponent
   ],
   imports: [
     RouterModule.forRoot(rootRouterConfig, { useHash: false, relativeLinkResolution: 'legacy' }),
