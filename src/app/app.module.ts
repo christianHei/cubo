@@ -9,13 +9,15 @@ import {rootRouterConfig} from "./app.routing";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LadoUnoComponent } from './lado-uno/lado-uno.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
+import { LadoDosComponent } from './lado-dos/lado-dos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
     PageNotFoundComponent,
-    LadoUnoComponent
+    LadoUnoComponent,
+    LadoDosComponent
   ],
   imports: [
     RouterModule.forRoot(rootRouterConfig, { useHash: false, relativeLinkResolution: 'legacy' }),
