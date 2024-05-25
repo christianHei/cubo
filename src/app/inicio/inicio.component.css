@@ -55,3 +55,32 @@ body {
 .left   { transform: rotateY(-90deg) translateZ(155px); background-image: url('../../assets/images/6.jpeg'); }
 .top    { transform: rotateX( 90deg) translateZ(155px); background-image: url('../../assets/images/1.jpeg'); }
 .bottom { transform: rotateX(-90deg) translateZ(155px); background-image: url('../../assets/images/2.jpg'); }
+
+/* Media queries para hacer el diseño responsive */
+@media (max-width: 768px), (max-width: 480px)  {
+
+  /* Estilos adicionales para centrar el cubo */
+  .cube-container {
+    width: 200px; /*tamaño del cubo*/
+    height: 200px; /*tamaño del cubo*/
+    perspective: 600px;
+  }
+
+  .face {
+    position: absolute;
+    width: 200px; /*tamaño del cubo*/
+    height: 200px; /*tamaño del cubo*/
+    background-size: cover;
+    backface-visibility: hidden;
+    cursor: pointer;
+    border-radius: 20px; /* Ajusta este valor para redondear los bordes */
+  }
+
+  /*modifivar el translate segun el tamaño del cubo*/
+  .front  { transform: rotateY(  0deg) translateZ(102px); background-image: url('../../assets/images/3.jpeg'); }
+  .right  { transform: rotateY( 90deg) translateZ(102px); background-image: url('../../assets/images/4.jpg'); }
+  .back   { transform: rotateY(180deg) translateZ(102px); background-image: url('../../assets/images/5.jpg'); }
+  .left   { transform: rotateY(-90deg) translateZ(102px); background-image: url('../../assets/images/6.jpeg'); }
+  .top    { transform: rotateX( 90deg) translateZ(102px); background-image: url('../../assets/images/1.jpeg'); }
+  .bottom { transform: rotateX(-90deg) translateZ(102px); background-image: url('../../assets/images/2.jpg'); }
+}
