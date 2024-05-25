@@ -14,6 +14,10 @@ export class InicioComponent {
   startMousePosition: { x: number, y: number } | null = null;
   clickTimer: any;
   isLongPress = false;
+  // móviles
+  isTouching = false;
+  touchStartX = 0;
+  touchStartY = 0;
 
   constructor(private router: Router) {} // Inyecta el Router
 
@@ -97,6 +101,34 @@ export class InicioComponent {
       return distance > 5; // Define un umbral para considerar si el mouse se ha movido
     }
     return false;
+  }
+
+  @HostListener('document:touchstart', ['$event'])
+  onTouchStart(event: TouchEvent) {
+    event.preventDefault(); // Evita el comportamiento predeterminado del desplazamiento
+    this.isTouching = true;
+    const touch = event.touches[0];
+    this.touchStartX = touch.clientX;
+    this.touchStartY = touch.clientY;
+  }
+
+  @HostListener('document:touchmove', ['$event'])
+  onTouchMove(event: TouchEvent) {
+    event.preventDefault(); // Evita el comportamiento predeterminado del desplazamiento
+    if (this.isTouching) {
+      const touch = event.touches[0];
+      const deltaX = touch.clientX - this.touchStartX;
+      const deltaY = touch.clientY - this.touchStartY;
+      this.baseRotateX -= deltaY * 0.5;
+      this.baseRotateY += deltaX * 0.5;
+      this.touchStartX = touch.clientX;
+      this.touchStartY = touch.clientY;
+    }
+  }
+
+  @HostListener('document:touchend', ['$event'])
+  onTouchEnd(event: TouchEvent) {
+    this.isTouching = false;
   }
 
   ngOnDestroy() {
