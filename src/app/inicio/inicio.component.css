@@ -49,12 +49,19 @@ body {
 }
 
 /*modificar el translate segun el tamaño del cubo*/
-.front  { transform: rotateY(  0deg) translateZ(155px); background-image: url('../../assets/images/3.jpeg'); }
+/*.front  { transform: rotateY(  0deg) translateZ(155px); background-image: url('../../assets/images/3.jpeg'); }
 .right  { transform: rotateY( 90deg) translateZ(155px); background-image: url('../../assets/images/4.jpg'); }
 .back   { transform: rotateY(180deg) translateZ(155px); background-image: url('../../assets/images/5.jpg'); }
 .left   { transform: rotateY(-90deg) translateZ(155px); background-image: url('../../assets/images/6.jpeg'); }
 .top    { transform: rotateX( 90deg) translateZ(155px); background-image: url('../../assets/images/1.jpeg'); }
-.bottom { transform: rotateX(-90deg) translateZ(155px); background-image: url('../../assets/images/2.jpg'); }
+.bottom { transform: rotateX(-90deg) translateZ(155px); background-image: url('../../assets/images/2.jpg'); }*/
+.front  { transform: rotateY(  0deg); background-image: url('../../assets/images/3.jpeg'); }
+.right  { transform: rotateY( 90deg); background-image: url('../../assets/images/4.jpg'); }
+.back   { transform: rotateY(180deg); background-image: url('../../assets/images/5.jpg'); }
+.left   { transform: rotateY(-90deg); background-image: url('../../assets/images/6.jpeg'); }
+.top    { transform: rotateX( 90deg); background-image: url('../../assets/images/1.jpeg'); }
+.bottom { transform: rotateX(-90deg); background-image: url('../../assets/images/2.jpg'); }
+
 
 /* Media queries para hacer el diseño responsive */
 @media (max-width: 768px), (max-width: 480px)  {
@@ -77,10 +84,16 @@ body {
   }
 
   /*modifivar el translate segun el tamaño del cubo*/
-  .front  { transform: rotateY(  0deg) translateZ(102px); background-image: url('../../assets/images/3.jpeg'); }
+  /*.front  { transform: rotateY(  0deg) translateZ(102px); background-image: url('../../assets/images/3.jpeg'); }
   .right  { transform: rotateY( 90deg) translateZ(102px); background-image: url('../../assets/images/4.jpg'); }
   .back   { transform: rotateY(180deg) translateZ(102px); background-image: url('../../assets/images/5.jpg'); }
   .left   { transform: rotateY(-90deg) translateZ(102px); background-image: url('../../assets/images/6.jpeg'); }
   .top    { transform: rotateX( 90deg) translateZ(102px); background-image: url('../../assets/images/1.jpeg'); }
-  .bottom { transform: rotateX(-90deg) translateZ(102px); background-image: url('../../assets/images/2.jpg'); }
+  .bottom { transform: rotateX(-90deg) translateZ(102px); background-image: url('../../assets/images/2.jpg'); }*/
+  .front  { transform: rotateY(  0deg); }
+  .right  { transform: rotateY( 90deg); }
+  .back   { transform: rotateY(180deg); }
+  .left   { transform: rotateY(-90deg); }
+  .top    { transform: rotateX( 90deg); }
+  .bottom { transform: rotateX(-90deg); }
 }

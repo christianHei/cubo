@@ -18,6 +18,9 @@ export class InicioComponent {
   isTouching = false;
   touchStartX = 0;
   touchStartY = 0;
+  // translate
+  translateZ = 155;
+  translateZMoviles = 102;
 
   constructor(private router: Router) {} // Inyecta el Router
 
@@ -54,27 +57,29 @@ export class InicioComponent {
       // @ts-ignore
       const cubeFace = event.target as HTMLElement;
       if (cubeFace.classList.contains('face')) {
-        // Si no es un clic sostenido, el mouse no se ha movido y se ha hecho clic,
-        // realiza la redirección solo si se ha hecho clic en una cara del cubo
-        const faceId = cubeFace.id; // Obtener el ID de la cara del cubo seleccionada
-        if (faceId === 'lado1') {
-          this.router.navigateByUrl('/lado-uno'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
-        }
-        else if (faceId === 'lado2') {
-          this.router.navigateByUrl('/lado-dos'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
-        }
-        else if (faceId === 'lado3') {
-          this.router.navigateByUrl('/lado-tres'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
-        }
-        else if (faceId === 'lado4') {
-          this.router.navigateByUrl('/lado-cuatro'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
-        }
-        else if (faceId === 'lado5') {
-          this.router.navigateByUrl('/lado-cinco'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
-        }
-        else if (faceId === 'lado6') {
-          this.router.navigateByUrl('/lado-seis'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
-        }
+        this.moveCubeTranslateZ().then(() => {
+          // Si no es un clic sostenido, el mouse no se ha movido y se ha hecho clic,
+          // realiza la redirección solo si se ha hecho clic en una cara del cubo
+          const faceId = cubeFace.id; // Obtener el ID de la cara del cubo seleccionada
+          if (faceId === 'lado1') {
+            this.router.navigateByUrl('/lado-uno'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
+          }
+          else if (faceId === 'lado2') {
+            this.router.navigateByUrl('/lado-dos'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
+          }
+          else if (faceId === 'lado3') {
+            this.router.navigateByUrl('/lado-tres'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
+          }
+          else if (faceId === 'lado4') {
+            this.router.navigateByUrl('/lado-cuatro'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
+          }
+          else if (faceId === 'lado5') {
+            this.router.navigateByUrl('/lado-cinco'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
+          }
+          else if (faceId === 'lado6') {
+            this.router.navigateByUrl('/lado-seis'); // Redirigir a la página de opciones con el ID de la cara del cubo como parte de la URL
+          }
+        });
       }
     }
     this.isLongPress = false; // Restablece la bandera de clic sostenido
@@ -144,4 +149,31 @@ export class InicioComponent {
   get totalRotateY() {
     return this.baseRotateY;
   }
+
+  getTranslateZ() {
+    return window.innerWidth <= 768 ? this.translateZMoviles : this.translateZ;
+  }
+
+  moveCubeTranslateZ(): Promise<void> {
+    return new Promise((resolve) => {
+      const duration = 1; // duración en milisegundos
+      const steps = 100; // número de pasos
+      let currentStep = 0;
+
+      const interval = setInterval(() => {
+        if (window.innerWidth <= 768) {
+          this.translateZMoviles += 2;
+        } else {
+          this.translateZ += 2;
+        }
+
+        currentStep++;
+        if (currentStep >= steps) {
+          clearInterval(interval);
+          resolve();
+        }
+      }, duration / steps);
+    });
+  }
+
 }
