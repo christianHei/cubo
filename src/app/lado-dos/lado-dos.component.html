@@ -16,7 +16,7 @@
         <!-- Aquí puedes colocar tu reproductor de vídeo -->
         <!-- Puedes ajustar el tamaño del reproductor según tus necesidades -->
         <div fxLayoutAlign="center">
-          <video class="video-autoplay" autoplay loop>
+          <video #videoPlayer class="video-autoplay" (ended)="videoEnded($event)" autoplay>
             <source src="https://krugercorp.com/lado2.mp4" type="video/mp4">
             Tu navegador no admite la reproducción de video.
           </video>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
@@ -11,6 +11,8 @@ export class LadoDosComponent implements OnInit {
   expandedImage: boolean = false;
   expandedImageSrc: string = '';
   backButton = true;
+
+  @ViewChild('videoPlayer') videoplayer: any;
 
   constructor(private router: Router) { }
 
@@ -33,5 +35,10 @@ export class LadoDosComponent implements OnInit {
     this.expandedImage = false; // Oculta la imagen expandida
     this.expandedImageSrc = ''; // Limpia la ruta de la imagen expandida
     this.backButton = true;
+  }
+
+  videoEnded(event: any) {
+    this.videoplayer.nativeElement.controls = true; // Mostrar los controles del reproductor de video después de que termine la reproducción
+    this.videoplayer.nativeElement.autoplay = false; // Desactivar la reproducción automática al finalizar el video
   }
 }
