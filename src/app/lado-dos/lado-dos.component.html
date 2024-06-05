@@ -4,9 +4,9 @@
   </div>
   <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
     <div class="left-images" fxLayout="column" fxLayout.xs="row">
-      <img src="assets/images/lado-2/1.jpg" alt="Imagen 1" (click)="expandImage($event)">
-      <img src="assets/images/lado-2/2.jpg" alt="Imagen 2" (click)="expandImage($event)">
-      <img src="assets/images/lado-2/3.jpg" alt="Imagen 3" (click)="expandImage($event)">
+      <img src="https://krugercorp.com/cubo/lado2/1.jpg" alt="Imagen 1" (click)="expandImage($event)" loading="lazy">
+      <img src="https://krugercorp.com/cubo/lado2/2.jpg" alt="Imagen 2" (click)="expandImage($event)" loading="lazy">
+      <img src="https://krugercorp.com/cubo/lado2/3.jpg" alt="Imagen 3" (click)="expandImage($event)" loading="lazy">
     </div>
     <div class="video" fxLayout="column" fxLayout.xs="row" fxLayoutAlign="center">
       <!-- Aquí puedes colocar tu reproductor de vídeo -->
@@ -16,17 +16,17 @@
         <!-- Aquí puedes colocar tu reproductor de vídeo -->
         <!-- Puedes ajustar el tamaño del reproductor según tus necesidades -->
         <div fxLayoutAlign="center">
-          <video #videoPlayer class="video-autoplay" (ended)="videoEnded($event)" autoplay>
-            <source src="https://krugercorp.com/lado2.mp4" type="video/mp4">
+          <video #videoPlayer class="video-autoplay" (ended)="videoEnded($event)" autoplay preload="auto">
+            <source src="https://krugercorp.com/cubo/lado2.mp4" type="video/mp4">
             Tu navegador no admite la reproducción de video.
           </video>
         </div>
       </div>
     </div>
     <div class="right-images" fxLayout="column" fxLayout.xs="row">
-      <img src="assets/images/lado-2/4.jpg" alt="Imagen 4" (click)="expandImage($event)">
-      <img src="assets/images/lado-2/5.jpg" alt="Imagen 5" (click)="expandImage($event)">
-      <img src="assets/images/lado-2/6.jpg" alt="Imagen 6" (click)="expandImage($event)">
+      <img src="https://krugercorp.com/cubo/lado2/4.jpg" alt="Imagen 4" (click)="expandImage($event)" loading="lazy">
+      <img src="https://krugercorp.com/cubo/lado2/5.jpg" alt="Imagen 5" (click)="expandImage($event)" loading="lazy">
+      <img src="https://krugercorp.com/cubo/lado2/6.jpg" alt="Imagen 6" (click)="expandImage($event)" loading="lazy">
     </div>
   </div>
   <!-- Contenedor adicional para la imagen expandida -->

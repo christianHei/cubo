@@ -14,6 +14,9 @@ import { LadoTresComponent } from './lado-tres/lado-tres.component';
 import { LadoCuatroComponent } from './lado-cuatro/lado-cuatro.component';
 import { LadoCincoComponent } from './lado-cinco/lado-cinco.component';
 import { LadoSeisComponent } from './lado-seis/lado-seis.component';
+import {ServiceWorkerModule} from "@angular/service-worker";
+import { environment } from '../environments/environment';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { LadoSeisComponent } from './lado-seis/lado-seis.component';
     RouterModule.forRoot(rootRouterConfig, { useHash: false, relativeLinkResolution: 'legacy' }),
     BrowserModule,
     RouterTestingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
