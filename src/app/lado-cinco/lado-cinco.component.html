@@ -4,22 +4,20 @@
   </div>
   <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
     <div class="left-images" fxLayout="column" fxLayout.xs="row">
-      <img src="https://krugercorp.com/cubo/lado5/1.jpg" alt="Imagen 1" (click)="expandImage($event)" loading="lazy">
-      <img src="https://krugercorp.com/cubo/lado5/2.jpg" alt="Imagen 2" (click)="expandImage($event)" loading="lazy">
+      <img *ngFor="let img of imageUrls.slice(20, 22)" [src]="img" (click)="expandImage($event)" loading="lazy" alt="Imagen">
     </div>
     <div class="video" fxLayout="column" fxLayout.xs="row" fxLayoutAlign="center">
       <!-- Aquí puedes colocar tu reproductor de vídeo -->
       <!-- Puedes ajustar el tamaño del reproductor según tus necesidades -->
       <div fxLayoutAlign="center" >
         <video #videoPlayer class="video-autoplay" (ended)="videoEnded($event)" autoplay preload="auto">
-          <source src="https://krugercorp.com/cubo/lado5.mp4" type="video/mp4">
+          <source src="{{ videoService.getVideoUrls()[4] }}" type="video/mp4">
           Tu navegador no admite la reproducción de video.
         </video>
       </div>
     </div>
     <div class="right-images" fxLayout="column" fxLayout.xs="row">
-      <img src="https://krugercorp.com/cubo/lado5/3.jpg" alt="Imagen 3" (click)="expandImage($event)" loading="lazy">
-      <img src="https://krugercorp.com/cubo/lado5/4.jpg" alt="Imagen 4" (click)="expandImage($event)" loading="lazy">
+      <img *ngFor="let img of imageUrls.slice(22, 24)" [src]="img" (click)="expandImage($event)" loading="lazy" alt="Imagen">
     </div>
   </div>
   <!-- Contenedor adicional para la imagen expandida -->

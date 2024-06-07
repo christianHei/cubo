@@ -1,5 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {Router} from "@angular/router";
+import {ImagenesService} from "../inicio/imagenes.service";
+import {VideoService} from "../inicio/video.service";
 
 @Component({
   selector: 'app-lado-dos',
@@ -12,11 +14,16 @@ export class LadoDosComponent implements OnInit {
   expandedImageSrc: string = '';
   backButton = true;
 
+  imageUrls: string[] = [];
+
   @ViewChild('videoPlayer') videoplayer: any;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private imagenesService: ImagenesService,
+              public videoService: VideoService) { }
 
   ngOnInit(): void {
+    this.imageUrls = this.imagenesService.getAllImageUrls();
   }
 
   goBack() {
