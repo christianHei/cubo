@@ -9,6 +9,23 @@ body {
   user-select: none; /* Standard syntax */
 }
 
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 65px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.09); /* Fondo blanco con 80% de opacidad */
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-content: center; /* Centra la imagen verticalmente */
+}
+
 /* Estilos básicos para centrar la escena */
 .scene {
   position: absolute; /* Posiciona la imagen expandida sobre el contenedor */
@@ -48,13 +65,24 @@ body {
   border-radius: 20px; /* Ajusta este valor para redondear los bordes */
 }
 
-/*modificar el translate segun el tamaño del cubo*/
-/*.front  { transform: rotateY(  0deg) translateZ(155px); background-image: url('../../assets/images/3.jpeg'); }
-.right  { transform: rotateY( 90deg) translateZ(155px); background-image: url('../../assets/images/4.jpg'); }
-.back   { transform: rotateY(180deg) translateZ(155px); background-image: url('../../assets/images/5.jpg'); }
-.left   { transform: rotateY(-90deg) translateZ(155px); background-image: url('../../assets/images/6.jpeg'); }
-.top    { transform: rotateX( 90deg) translateZ(155px); background-image: url('../../assets/images/1.jpeg'); }
-.bottom { transform: rotateX(-90deg) translateZ(155px); background-image: url('../../assets/images/2.jpg'); }*/
+.start-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent; /* Botón transparente */
+  border: none; /* Sin borde */
+  color: #ffffff; /* Color de texto especificado */
+  border-radius: 5px;
+  cursor: pointer; /* Cambia el cursor al puntero cuando pasa sobre el botón */
+  text-decoration: none; /* Quita el subrayado del texto */
+  font-family: Sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.start-button:hover {
+  color: #ff6900;
+}
+
 .front  { transform: rotateY(  0deg); background-image: url('../../assets/images/3.jpeg'); }
 .right  { transform: rotateY( 90deg); background-image: url('../../assets/images/4.jpg'); }
 .back   { transform: rotateY(180deg); background-image: url('../../assets/images/5.jpg'); }
