@@ -89,6 +89,10 @@
   width: 60%;
 }
 
+.hover-scale:hover {
+  transform: scale(1.05); /* Aumenta ligeramente la escala */
+}
+
 /* Media queries para hacer el diseño responsive */
 @media (max-width: 768px) {
 

@@ -4,7 +4,7 @@
   </div>
   <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
     <div class="left-images" fxLayout="column" fxLayout.xs="row">
-      <img *ngFor="let img of imageUrls.slice(16, 18)" [src]="img" (click)="expandImage($event)" loading="lazy" alt="Imagen">
+      <img *ngFor="let img of imageUrls.slice(16, 18)" [src]="img" (click)="expandImage($event)" loading="lazy" alt="Imagen" class="hover-scale">
     </div>
     <div class="video" fxLayout="column" fxLayout.xs="row" fxLayoutAlign="center">
       <!-- Aquí puedes colocar tu reproductor de vídeo -->
@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="right-images" fxLayout="column" fxLayout.xs="row">
-      <img *ngFor="let img of imageUrls.slice(18, 20)" [src]="img" (click)="expandImage($event)" loading="lazy" alt="Imagen">
+      <img *ngFor="let img of imageUrls.slice(18, 20)" [src]="img" (click)="expandImage($event)" loading="lazy" alt="Imagen" class="hover-scale">
     </div>
   </div>
   <!-- Contenedor adicional para la imagen expandida -->
