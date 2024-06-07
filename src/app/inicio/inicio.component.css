@@ -13,7 +13,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  height: 65px;
+  height: 56px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.09); /* Fondo blanco con 80% de opacidad */
   z-index: 1000;
