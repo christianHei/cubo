@@ -1,5 +1,5 @@
-<div fxLayout="column" class="container">
-  <div class="button-container" *ngIf="backButton" fxLayout="row" fxLayoutAlign="center"  >
+<div fxLayout="column" class="container"> <!--style="background-image: url('https://krugercorp.com/wp-content/uploads/2024/04/Rainbow-2-2.jpg'); background-size: cover; background-position: center; height: 100vh;-->
+<div class="button-container" *ngIf="backButton" fxLayout="row" fxLayoutAlign="center"  >
     <button class="button" (click)="goBack()">Atrás</button>
   </div>
   <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
@@ -10,7 +10,7 @@
       <!-- Aquí puedes colocar tu reproductor de vídeo -->
       <!-- Puedes ajustar el tamaño del reproductor según tus necesidades -->
       <div fxLayoutAlign="center">
-        <video #videoPlayer class="video-autoplay" (ended)="videoEnded($event)" autoplay preload="auto">
+        <video #videoPlayer class="video-autoplay" (ended)="videoEnded($event)" autoplay preload="auto" >
           <source src="{{ videoService.getVideoUrls()[0] }}" type="video/mp4">
           Tu navegador no admite la reproducción de video.
         </video>
