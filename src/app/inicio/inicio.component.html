@@ -1,4 +1,4 @@
-<div class="scene">
+<div class="scene" fxLayout="column">
   <div class="cube-container">
     <div class="cube" [style.transform]="'rotateX(' + totalRotateX + 'deg) rotateY(' + totalRotateY + 'deg)'">
       <div id="lado3" class="face front" [style.transform]="'rotateY(0deg) translateZ(' + getTranslateZ() + 'px)'"></div>
@@ -9,6 +9,10 @@
       <div id="lado2" class="face bottom" [style.transform]="'rotateX(-90deg) translateZ(' + getTranslateZ() + 'px)'"></div>
     </div>
   </div>
+  <!-- Footer HTML -->
+  <!--<div class="footer-container">
+    <p>Copyright © 2024 KRUGER CORP, Todos los derechos reservados.</p>
+  </div>-->
 </div>
 
 <div fxLayout="row" fxLayoutAlign="space-between center" style="padding-left: 7.5%; padding-right: 7.5%" class="header-container">
@@ -24,3 +28,5 @@
   </div>
 
 </div>
+
+

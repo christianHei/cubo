@@ -83,6 +83,20 @@ body {
   color: #ff6900;
 }
 
+/* Styles for the footer */
+/*.footer-container {
+  width: 100%;
+  background-color: #21272A;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  color: #ffffff;
+  font-family: Sans-serif;
+  font-size: 0.6em;
+}*/
+
 .front  { transform: rotateY(  0deg); background-image: url('../../assets/images/3.jpeg'); }
 .right  { transform: rotateY( 90deg); background-image: url('../../assets/images/4.jpg'); }
 .back   { transform: rotateY(180deg); background-image: url('../../assets/images/5.jpg'); }
