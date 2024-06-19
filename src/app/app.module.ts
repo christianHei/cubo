@@ -16,6 +16,7 @@ import { LadoCincoComponent } from './lado-cinco/lado-cinco.component';
 import { LadoSeisComponent } from './lado-seis/lado-seis.component';
 import {ServiceWorkerModule} from "@angular/service-worker";
 import { environment } from '../environments/environment';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { environment } from '../environments/environment';
     LadoTresComponent,
     LadoCuatroComponent,
     LadoCincoComponent,
-    LadoSeisComponent
+    LadoSeisComponent,
+    FooterComponent
   ],
   imports: [
     RouterModule.forRoot(rootRouterConfig, { useHash: false, relativeLinkResolution: 'legacy' }),

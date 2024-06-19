@@ -1,5 +1,5 @@
 <div fxLayout="column" class="container"> <!--style="background-image: url('https://krugercorp.com/wp-content/uploads/2024/04/Rainbow-2-2.jpg'); background-size: cover; background-position: center; height: 100vh;-->
-<div class="button-container" *ngIf="backButton" fxLayout="row" fxLayoutAlign="center"  >
+  <div class="button-container" *ngIf="backButton" fxLayout="row" fxLayoutAlign="center"  >
     <button class="button" (click)="goBack()">Atrás</button>
   </div>
   <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
@@ -26,3 +26,5 @@
     <img [src]="expandedImageSrc" alt="Imagen expandida" class="expanded-image">
   </div>
 </div>
+
+<app-footer></app-footer>
